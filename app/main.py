@@ -7,7 +7,7 @@ class Animal:
             name: str,
             health:
             int = 100
-    )-> None:
+    ) -> None:
         self.name = name
         self.health = health
         self.hidden = False
