@@ -1,6 +1,6 @@
 class Animal:
 
-    alive = []
+    alive: list["Animal"] = []
 
     def __init__(self, name: str, health: int = 100) -> None:
         self.name = name
@@ -34,5 +34,5 @@ class Carnivore(Animal):
                 print(f"{self.name} cannot bite hidden {other.name}")
             elif other.hidden is False:
                 other.health -= 50
-            if other.health <= 0:
-                other.die()
+                if other.health <= 0:
+                    other.die()
